@@ -78,7 +78,7 @@
             </p>
           </div>
           <div
-            class="card-footer bg-transparent d-flex justify-content-between"
+            class="card-footer bg-transparent d-flex justify-content-between flex-wrap gap-1"
           >
             <a
               [routerLink]="['/products', product.id]"
@@ -86,12 +86,20 @@
             >
               View Details
             </a>
-            <button
-              class="btn btn-sm btn-outline-danger"
-              (click)="deleteProduct(product.id!)"
-            >
-              Delete
-            </button>
+            <div class="d-flex gap-1">
+              <a
+                [routerLink]="['/edit-product', product.id]"
+                class="btn btn-sm btn-outline-secondary"
+              >
+                Edit
+              </a>
+              <button
+                class="btn btn-sm btn-outline-danger"
+                (click)="deleteProduct(product.id!)"
+              >
+                Delete
+              </button>
+            </div>
           </div>
         </div>
       </div>

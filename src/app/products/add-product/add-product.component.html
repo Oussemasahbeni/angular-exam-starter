@@ -3,7 +3,7 @@
     <div class="col-lg-8 mx-auto">
       <div class="card shadow">
         <div class="card-header bg-primary text-white">
-          <h2 class="h4 mb-0">Add New Product</h2>
+          <h2 class="h4 mb-0">{{ pageTitle }}</h2>
         </div>
         <div class="card-body">
           <form
@@ -185,9 +185,18 @@
                   role="status"
                   aria-hidden="true"
                 ></span>
-                {{ submitting ? "Adding..." : "Add Product" }}
+                {{
+                  submitting
+                    ? isEditMode
+                      ? "Updating..."
+                      : "Adding..."
+                    : isEditMode
+                    ? "Update Product"
+                    : "Add Product"
+                }}
               </button>
               <button
+                *ngIf="!isEditMode"
                 type="button"
                 class="btn btn-outline-secondary"
                 (click)="resetForm()"
@@ -195,6 +204,23 @@
               >
                 Reset Form
               </button>
+              <button
+                *ngIf="isEditMode"
+                type="button"
+                class="btn btn-outline-secondary"
+                (click)="resetForm()"
+                [disabled]="submitting"
+              >
+                Reset Changes
+              </button>
+              <a
+                class="btn btn-outline-dark"
+                [routerLink]="
+                  isEditMode ? ['/products', productId] : ['/products']
+                "
+              >
+                Cancel
+              </a>
             </div>
           </form>
         </div>
