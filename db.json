@@ -1,58 +1,76 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "iPhone 13 Pro",
-            "price": 999.99,
-            "quantity": 25,
-            "description": "The latest iPhone with amazing camera capabilities, long battery life, and the powerful A15 Bionic chip. Features a stunning Super Retina XDR display with ProMotion technology for a responsive experience.",
-            "imageUrl": "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=600&auto=format&fit=crop",
-            "category": "Smartphones"
-        },
-        {
-            "id": 2,
-            "name": "Sony WH-1000XM4",
-            "price": 349.95,
-            "quantity": 42,
-            "description": "Industry-leading noise cancellation wireless headphones with 30-hour battery life, touch controls, and exceptional sound quality. Perfect for travel, work, or just enjoying your music without distractions.",
-            "imageUrl": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=600&auto=format&fit=crop",
-            "category": "Audio"
-        },
-        {
-            "id": 3,
-            "name": "Apple Watch Series 7",
-            "price": 399.50,
-            "quantity": 18,
-            "description": "Track your fitness goals with this advanced smartwatch. Features heart rate monitoring, ECG, blood oxygen level tracking, GPS, and water resistance up to 50m. The always-on Retina display is nearly 20% larger than Series 6.",
-            "imageUrl": "https://images.unsplash.com/photo-1617043786394-f977fa12eddf?w=600&auto=format&fit=crop",
-            "category": "Wearables"
-        },
-        {
-            "id": 4,
-            "name": "MacBook Pro M2",
-            "price": 1999.00,
-            "quantity": 12,
-            "description": "The ultimate developer laptop with the powerful M2 chip, stunning Liquid Retina XDR display, and all-day battery life. Features a 14-inch display, 16GB unified memory, and 512GB SSD storage.",
-            "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop",
-            "category": "Laptops"
-        },
-        {
-            "id": 5,
-            "name": "PlayStation 5",
-            "price": 499.99,
-            "quantity": 5,
-            "description": "Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with haptic feedback, adaptive triggers, and 3D audio, and an all-new generation of incredible PlayStation games.",
-            "imageUrl": "https://images.unsplash.com/photo-1607853202273-797f1c22a38e?w=600&auto=format&fit=crop",
-            "category": "Gaming"
-        },
-        {
-            "id": 6,
-            "name": "Samsung QLED 4K TV",
-            "price": 1299.99,
-            "quantity": 10,
-            "description": "Quantum Dot technology delivers our most realistic picture. Direct Full Array features concentrated zones of precision-controlled LEDs that adjust automatically for deeper blacks and pure whites.",
-            "imageUrl": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=600&auto=format&fit=crop",
-            "category": "Home Entertainment"
-        }
-    ]
+  "products": [
+    {
+      "id": "1",
+      "name": "iPhone 13 Pro",
+      "price": 999.99,
+      "quantity": 25,
+      "description": "The latest iPhone with amazing camera capabilities, long battery life, and the powerful A15 Bionic chip. Features a stunning Super Retina XDR display with ProMotion technology for a responsive experience.",
+      "imageUrl": "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=600&auto=format&fit=crop",
+      "category": "Smartphones"
+    },
+    {
+      "id": "2",
+      "name": "Sony WH-1000XM4",
+      "price": 349.95,
+      "quantity": 42,
+      "description": "Industry-leading noise cancellation wireless headphones with 30-hour battery life, touch controls, and exceptional sound quality. Perfect for travel, work, or just enjoying your music without distractions.",
+      "imageUrl": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=600&auto=format&fit=crop",
+      "category": "Audio"
+    },
+    {
+      "id": "3",
+      "name": "Apple Watch Series 7",
+      "price": 399.5,
+      "quantity": 18,
+      "description": "Track your fitness goals with this advanced smartwatch. Features heart rate monitoring, ECG, blood oxygen level tracking, GPS, and water resistance up to 50m. The always-on Retina display is nearly 20% larger than Series 6.",
+      "imageUrl": "https://images.unsplash.com/photo-1617043786394-f977fa12eddf?w=600&auto=format&fit=crop",
+      "category": "Wearables"
+    },
+    {
+      "id": "4",
+      "name": "MacBook Pro M2",
+      "price": 1999,
+      "quantity": 12,
+      "description": "The ultimate developer laptop with the powerful M2 chip, stunning Liquid Retina XDR display, and all-day battery life. Features a 14-inch display, 16GB unified memory, and 512GB SSD storage.",
+      "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop",
+      "category": "Laptops"
+    },
+    {
+      "id": "5",
+      "name": "PlayStation 5",
+      "price": 499.99,
+      "quantity": 5,
+      "description": "Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with haptic feedback, adaptive triggers, and 3D audio, and an all-new generation of incredible PlayStation games.",
+      "imageUrl": "https://images.unsplash.com/photo-1607853202273-797f1c22a38e?w=600&auto=format&fit=crop",
+      "category": "Gaming"
+    },
+    {
+      "id": "6",
+      "name": "Samsung QLED 4K TV",
+      "price": 1299.99,
+      "quantity": 10,
+      "description": "Quantum Dot technology delivers our most realistic picture. Direct Full Array features concentrated zones of precision-controlled LEDs that adjust automatically for deeper blacks and pure whites.",
+      "imageUrl": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=600&auto=format&fit=crop",
+      "category": "Home Entertainment"
+    },
+    {
+      "id": "c6e1",
+      "name": "Conan Becker",
+      "price": 260,
+      "quantity": 597,
+      "description": "Voluptatem omnis obc",
+      "imageUrl": "https://www.husuxujo.com.au",
+      "category": "Non deserunt facere "
+    },
+    {
+      "id": "ebf6",
+      "name": "Hadassah Kim",
+      "price": 689,
+      "quantity": 675,
+      "description": "Facere consectetur u",
+      "imageUrl": "",
+      "category": "Culpa quis consecte"
+    }
+  ]
 }

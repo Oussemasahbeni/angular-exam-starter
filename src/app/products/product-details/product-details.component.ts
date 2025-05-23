@@ -24,8 +24,9 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit(): void {
     // Get the product ID from the route parameter
     this.route.paramMap.subscribe((params) => {
-      const productId = Number(params.get('id'));
+      const productId = params.get('id');
 
+      console.log(productId);
       if (productId) {
         this.loadProduct(productId);
       } else {
@@ -35,7 +36,7 @@ export class ProductDetailsComponent implements OnInit {
     });
   }
 
-  loadProduct(id: number): void {
+  loadProduct(id: any): void {
     this.loading = true;
     this.productService.getProductById(id).subscribe({
       next: (product) => {
