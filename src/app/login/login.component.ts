@@ -6,6 +6,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,10 +17,10 @@ export class LoginComponent {
   loginForm: FormGroup;
   submitted = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      password: ['', [Validators.required, Validators.minLength(5)]],
     });
   }
 
@@ -28,6 +29,12 @@ export class LoginComponent {
     if (this.loginForm.invalid) {
       return;
     }
-    console.log('Form Submitted!', this.loginForm.value);
+    if (
+      this.loginForm.get('email')?.value === 'admin@admin.com' &&
+      this.loginForm.get('password')?.value === 'admin'
+    ) {
+      alert('Login successful');
+      this.router.navigate(['/products']);
+    }
   }
 }
