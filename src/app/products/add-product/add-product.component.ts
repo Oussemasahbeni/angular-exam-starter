@@ -12,7 +12,6 @@ import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-add-product',
-  standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './add-product.component.html',
   styleUrl: './add-product.component.css',
