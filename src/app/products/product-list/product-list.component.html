@@ -1,0 +1,100 @@
+<div class="container mt-4">
+  <h2 class="mb-4">Product List</h2>
+
+  <!-- Loading indicator -->
+  <div *ngIf="loading" class="text-center py-5">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="mt-2">Loading products...</p>
+  </div>
+
+  <!-- Error message -->
+  <div *ngIf="error" class="alert alert-danger">
+    {{ error }}
+    <button class="btn btn-sm btn-outline-danger ms-2" (click)="loadProducts()">
+      Retry
+    </button>
+  </div>
+
+  <!-- Empty state -->
+  <div
+    *ngIf="!loading && !error && products.length === 0"
+    class="text-center py-5"
+  >
+    <p class="fw-bold">No products found.</p>
+    <a routerLink="/add-product" class="btn btn-primary">Add New Product</a>
+  </div>
+
+  <!-- Products grid -->
+  <div *ngIf="!loading && !error && products.length > 0">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <p>Showing {{ products.length }} product(s)</p>
+      <a routerLink="/add-product" class="btn btn-primary">Add New Product</a>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" *ngFor="let product of products">
+        <div class="card h-100">
+          <a [routerLink]="['/products', product.id]">
+            <img
+              [src]="
+                product.imageUrl ||
+                'https://via.placeholder.com/300x200?text=No+Image'
+              "
+              class="card-img-top"
+              alt="{{ product.name }}"
+              style="height: 200px; object-fit: cover"
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">
+              <a
+                [routerLink]="['/products', product.id]"
+                class="text-decoration-none"
+                >{{ product.name }}</a
+              >
+            </h5>
+            <p class="card-text">
+              {{ product.description | slice : 0 : 100
+              }}{{ product.description.length > 100 ? "..." : "" }}
+            </p>
+            <p class="card-text">
+              <span class="fw-bold">Price:</span> ${{ product.price }}
+            </p>
+            <p class="card-text">
+              <span
+                class="badge rounded-pill"
+                [ngClass]="product.quantity > 0 ? 'bg-success' : 'bg-danger'"
+              >
+                {{ product.quantity > 0 ? "In Stock" : "Out of Stock" }}
+              </span>
+              <span class="ms-2" *ngIf="product.quantity > 0"
+                >{{ product.quantity }} left</span
+              >
+            </p>
+            <p class="card-text" *ngIf="product.category">
+              <small class="text-muted">Category: {{ product.category }}</small>
+            </p>
+          </div>
+          <div
+            class="card-footer bg-transparent d-flex justify-content-between"
+          >
+            <a
+              [routerLink]="['/products', product.id]"
+              class="btn btn-sm btn-primary"
+            >
+              View Details
+            </a>
+            <button
+              class="btn btn-sm btn-outline-danger"
+              (click)="deleteProduct(product.id!)"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

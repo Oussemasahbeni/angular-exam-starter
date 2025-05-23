@@ -1,0 +1,51 @@
+{
+    "events": [
+        {
+            "id": "711a",
+            "title": "Quis cupidatat ut li",
+            "description": "Nemo nihil porro fug",
+            "location": "Culpa ut saepe nequ",
+            "date": "1979-04-19",
+            "availability": false,
+            "nbrMax": 0
+        },
+        {
+            "id": "03c2",
+            "title": "Qui quis accusamus v",
+            "description": "Sit quam occaecat od",
+            "location": "Consectetur quia in",
+            "date": "2010-06-13",
+            "availability": true,
+            "nbrMax": 0
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "Smartphone XYZ",
+            "price": 899.99,
+            "quantity": 25,
+            "description": "The latest smartphone with high-end features including a stunning camera, long battery life, and fast processor.",
+            "imageUrl": "https://via.placeholder.com/300x200?text=Smartphone",
+            "category": "Electronics"
+        },
+        {
+            "id": 2,
+            "name": "Wireless Headphones",
+            "price": 149.95,
+            "quantity": 42,
+            "description": "Premium noise-cancelling wireless headphones with 30-hour battery life and exceptional sound quality.",
+            "imageUrl": "https://via.placeholder.com/300x200?text=Headphones",
+            "category": "Electronics"
+        },
+        {
+            "id": 3,
+            "name": "Fitness Watch",
+            "price": 199.50,
+            "quantity": 18,
+            "description": "Track your fitness goals with this advanced smartwatch. Features heart rate monitoring, GPS, and water resistance.",
+            "imageUrl": "https://via.placeholder.com/300x200?text=Fitness+Watch",
+            "category": "Wearables"
+        }
+    ]
+}
